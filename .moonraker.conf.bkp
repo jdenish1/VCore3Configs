@@ -127,3 +127,26 @@ managed_services = klipper
 primary_branch = main
 install_script = install.sh
 
+[update_manager LinearMovevementAnalysis]
+type = git_repo
+path = ~/klipper_linear_movement_analysis
+primary_branch = main
+origin = https://github.com/worksasintended/klipper_linear_movement_analysis.git
+install_script = install.sh
+env = ~/klippy-env/bin/python
+requirements = requirements.txt
+managed_services = klipper
+
+[update_manager fluidd-config]
+type = git_repo
+primary_branch = master
+path = ~/fluidd-config
+origin = https://github.com/fluidd-core/fluidd-config.git
+managed_services = klipper
+
+[update_manager fluidd]
+type = web
+channel = stable
+repo = fluidd-core/fluidd
+path = ~/fluidd
+
